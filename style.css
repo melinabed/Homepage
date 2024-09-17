@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1em;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.img-wrapper {
+  height: 350px;
+  width: 300px;
+  background: url(images/selfie.JPEG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.introduction {
+  max-width: 400px;
+  border: 1px solid black;
+}
+
+.project {
+  height: auto;
+  width: 200px;
+}
