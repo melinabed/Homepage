@@ -3,14 +3,43 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-family: "Roboto", sans-serif;
   font-size: 1em;
+  box-sizing: border-box;
+  background-color: #0a0a0a;
 }
+
+/*Header Styles*/
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background-color: #0a0a0a;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-right: 50px;
+  max-width: 250px;
+  animation: appear 1s ease-in;
+}
+
+#name {
+  -webkit-text-fill-color: #0a0a0a;
+  -webkit-text-stroke-color: #22c55e;
+  -webkit-text-stroke-width: 1px;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .img-wrapper {
@@ -20,20 +49,93 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
 .introduction {
   max-width: 400px;
-  border: 1px solid black;
+  padding: 20px;
+  background-color: #0a0a0a;
+  border: 2px solid #22c55e;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.introduction > .icons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+}
+
+/*Main Styles*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  flex-wrap: wrap;
+  background-color: #0a0a0a;
+}
+
+main > h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+  background-color: #171717;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(255, 255, 255, 0.15) 0px 2px 8px;
+}
+
+.info {
+  padding: 10px;
+  background-color: #171717;
+  color: #fff;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .project {
   height: auto;
-  width: 200px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/*Footer Styles*/
+
+footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(#0a0a0a, #22c55e);
+  color: #fff;
+}
+
+h4 {
+  font-size: 1.5rem;
 }

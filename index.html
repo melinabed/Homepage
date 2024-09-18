@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <div class="img-wrapper">Melina Bedingfield</div>
+      <h1>Hi, I'm <span id="name">Melina</span>, Web Developer</h1>
+      <div class="img-wrapper"></div>
       <div class="introduction">
-        <h1>About me</h1>
+        <h2>About me</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          I love playing video games, watching anime, going to the beach, and
+          hanging out with my best friend. I'm an aspiring web developer and
+          have enjoyed learning all there is to it. Solving problems and
+          creating beautilful websites bring me joy.
         </p>
         <div class="icons">
           <img src="icons/github.svg" alt="Github" />
@@ -31,117 +35,126 @@
       <h2>My Work</h2>
       <div class="card-container">
         <div class="card">
-          <img
-            class="project"
-            src="images/adminDashboard_ss.png"
-            alt="Admin Dashboard project"
-          />
+          <div class="card-img-wrapper">
+            <img
+              class="project"
+              src="images/adminDashboard_ss.png"
+              alt="Admin Dashboard project"
+            />
+          </div>
           <div class="info">
             <div class="card-header">
-              <h3>Project Name</h3>
+              <h3>Admin Dashboard</h3>
+              <div class="card-icons">
+                <img src="icons/github.svg" alt="Github" />
+                <img src="icons/external-link.svg" alt="External Link" />
+              </div>
+            </div>
+            <p>Full page dashboard with header, sections, and subsections.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img
+              class="project"
+              src="images/tictactoe_ss.png"
+              alt="Admin Dashboard project"
+            />
+          </div>
+          <div class="info">
+            <div class="card-header">
+              <h3>Tic Tac Toe</h3>
               <div class="card-icons">
                 <img src="icons/github.svg" alt="Github" />
                 <img src="icons/external-link.svg" alt="External Link" />
               </div>
             </div>
             <p>
-              Short descirption of the project. Just a couple sentences will do.
+              Game that allows users to input player name and play a game of Tic
+              Tac Toe resulting in a win or draw.
             </p>
           </div>
         </div>
         <div class="card">
-          <img
-            class="project"
-            src="images/adminDashboard_ss.png"
-            alt="Admin Dashboard project"
-          />
+          <div class="card-img-wrapper">
+            <img
+              class="project"
+              src="images/todolist_ss.png"
+              alt="Admin Dashboard project"
+            />
+          </div>
           <div class="info">
             <div class="card-header">
-              <h3>Project Name</h3>
+              <h3>Todo List</h3>
               <div class="card-icons">
                 <img src="icons/github.svg" alt="Github" />
                 <img src="icons/external-link.svg" alt="External Link" />
               </div>
             </div>
             <p>
-              Short descirption of the project. Just a couple sentences will do.
+              Allows users to select list and add/remove items from the list
+              using localStorage.
             </p>
           </div>
         </div>
         <div class="card">
-          <img
-            class="project"
-            src="images/adminDashboard_ss.png"
-            alt="Admin Dashboard project"
-          />
+          <div class="card-img-wrapper">
+            <img
+              class="project"
+              src="images/restuaraunt_ss.png"
+              alt="Admin Dashboard project"
+            />
+          </div>
           <div class="info">
             <div class="card-header">
-              <h3>Project Name</h3>
+              <h3>Restuaraunt Page</h3>
+              <div class="card-icons">
+                <img src="icons/github.svg" alt="Github" />
+                <img src="icons/external-link.svg" alt="External Link" />
+              </div>
+            </div>
+            <p>Restuaraunt page that displays tabs with unique information.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img
+              class="project"
+              src="images/signup_form_ss.png"
+              alt="Admin Dashboard project"
+            />
+          </div>
+          <div class="info">
+            <div class="card-header">
+              <h3>Signup Form</h3>
               <div class="card-icons">
                 <img src="icons/github.svg" alt="Github" />
                 <img src="icons/external-link.svg" alt="External Link" />
               </div>
             </div>
             <p>
-              Short descirption of the project. Just a couple sentences will do.
+              Form that will validate each field after clicking submit button.
+              Each input validated in Javascript.
             </p>
           </div>
         </div>
         <div class="card">
-          <img
-            class="project"
-            src="images/adminDashboard_ss.png"
-            alt="Admin Dashboard project"
-          />
-          <div class="info">
-            <div class="card-header">
-              <h3>Project Name</h3>
-              <div class="card-icons">
-                <img src="icons/github.svg" alt="Github" />
-                <img src="icons/external-link.svg" alt="External Link" />
-              </div>
-            </div>
-            <p>
-              Short descirption of the project. Just a couple sentences will do.
-            </p>
+          <div class="card-img-wrapper">
+            <img
+              class="project"
+              src="images/calculator_ss.png"
+              alt="Admin Dashboard project"
+            />
           </div>
-        </div>
-        <div class="card">
-          <img
-            class="project"
-            src="images/adminDashboard_ss.png"
-            alt="Admin Dashboard project"
-          />
           <div class="info">
             <div class="card-header">
-              <h3>Project Name</h3>
+              <h3>Calculator</h3>
               <div class="card-icons">
                 <img src="icons/github.svg" alt="Github" />
                 <img src="icons/external-link.svg" alt="External Link" />
               </div>
             </div>
-            <p>
-              Short descirption of the project. Just a couple sentences will do.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            class="project"
-            src="images/adminDashboard_ss.png"
-            alt="Admin Dashboard project"
-          />
-          <div class="info">
-            <div class="card-header">
-              <h3>Project Name</h3>
-              <div class="card-icons">
-                <img src="icons/github.svg" alt="Github" />
-                <img src="icons/external-link.svg" alt="External Link" />
-              </div>
-            </div>
-            <p>
-              Short descirption of the project. Just a couple sentences will do.
-            </p>
+            <p>Simple calculator that can do basic math operations.</p>
           </div>
         </div>
       </div>
