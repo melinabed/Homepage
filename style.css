@@ -11,6 +11,36 @@ body {
 
 /*Header Styles*/
 
+@media (max-width: 390px) {
+  body {
+    width: 100%;
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  #email {
+    display: none;
+  }
+
+  .card {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 391px) {
+  main {
+    padding: 20px;
+  }
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -73,7 +103,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px;
   flex-wrap: wrap;
   background-color: #0a0a0a;
 }
@@ -85,7 +114,7 @@ main > h2 {
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 30px;
 }
 
@@ -134,14 +163,26 @@ footer {
   gap: 10px;
   background: linear-gradient(#0a0a0a, #22c55e);
   color: #fff;
+  font-size: 1.25rem;
 }
 
 .contact {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 1.25rem;
+}
+
+footer > .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
+
+/*Work on mobile responsiveness*/
