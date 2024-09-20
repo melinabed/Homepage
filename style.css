@@ -1,3 +1,17 @@
+:root.dark {
+  --color-base-bg: #0a0a0a;
+  --color-base-text: #fff;
+  --color-h1-text: #22c55e;
+  --intro-border: 2px solid #22c55e;
+}
+
+:root.light {
+  --color-base-bg: #fff;
+  --color-base-text: #0a0a0a;
+  --color-h1-text: #06b6d4;
+  --intro-border: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -6,10 +20,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   box-sizing: border-box;
-  background-color: #0a0a0a;
+  background-color: var(--color-base-bg);
+  position: relative;
 }
-
-/*Header Styles*/
 
 @media (max-width: 390px) {
   body {
@@ -41,16 +54,84 @@ body {
   }
 }
 
+/*Toggle Switch*/
+
+.switch-container {
+  display: flex;
+  padding: 20px;
+  justify-content: right;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #404040;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 50%;
+  left: 5px;
+  z-index: 1;
+}
+
+input:checked + .slider {
+  background-color: #d4d4d4;
+}
+
+input:checked + .slider:before {
+  transform: translateX(32px);
+}
+
+#dark {
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+
+#light {
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+
+/*Header Styles*/
+
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #0a0a0a;
+  background-color: var(--color-base-bg);
 }
 
 h1 {
-  color: #fff;
+  color: var(--color-base-text);
   font-size: 3rem;
   margin-right: 50px;
   max-width: 250px;
@@ -58,9 +139,7 @@ h1 {
 }
 
 #name {
-  -webkit-text-fill-color: #0a0a0a;
-  -webkit-text-stroke-color: #22c55e;
-  -webkit-text-stroke-width: 1px;
+  color: var(--color-h1-text);
 }
 
 @keyframes appear {
@@ -84,10 +163,11 @@ h1 {
 .introduction {
   max-width: 400px;
   padding: 20px;
-  background-color: #0a0a0a;
-  border: 2px solid #22c55e;
+  background-color: var(--color-base-bg);
+  border: var(--intro-border);
   border-radius: 10px;
-  color: #fff;
+  color: var(--color-base-text);
+  box-shadow: var(--intro-border);
 }
 
 .introduction > .icons {
@@ -104,7 +184,7 @@ main {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #0a0a0a;
+  background-color: var(--color-base-bg);
 }
 
 main > h2 {
