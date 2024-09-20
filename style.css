@@ -1,15 +1,21 @@
+/*Styles for dark and light color theme respectively*/
+
 :root.dark {
   --color-base-bg: #0a0a0a;
   --color-base-text: #fff;
-  --color-h1-text: #22c55e;
   --intro-border: 2px solid #22c55e;
+  --main-bg: #0a0a0a;
+  --footer-bg: linear-gradient(#0a0a0a, #22c55e);
+  --card-bg: #171717;
 }
 
 :root.light {
   --color-base-bg: #fff;
   --color-base-text: #0a0a0a;
-  --color-h1-text: #06b6d4;
   --intro-border: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  --main-bg: #dcfce7;
+  --footer-bg: #fff;
+  --card-bg: #f5f5f5;
 }
 
 body {
@@ -23,6 +29,8 @@ body {
   background-color: var(--color-base-bg);
   position: relative;
 }
+
+/*Mobile Resonsiveness*/
 
 @media (max-width: 390px) {
   body {
@@ -108,13 +116,13 @@ input:checked + .slider:before {
   transform: translateX(32px);
 }
 
-#dark {
+#darkIcon {
   position: relative;
   top: 5px;
   left: 5px;
 }
 
-#light {
+#lightIcon {
   position: relative;
   top: 5px;
   left: 10px;
@@ -139,7 +147,7 @@ h1 {
 }
 
 #name {
-  color: var(--color-h1-text);
+  color: #22c55e;
 }
 
 @keyframes appear {
@@ -184,11 +192,11 @@ main {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: var(--color-base-bg);
+  background-color: var(--main-bg);
 }
 
 main > h2 {
-  color: #fff;
+  color: var(--color-base-text);
   font-size: 2rem;
 }
 
@@ -203,18 +211,18 @@ main > h2 {
   background-color: #fff;
   transition: transform 0.5s ease-in-out;
   cursor: pointer;
-  background-color: #171717;
+  background-color: var(--card-bg);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: rgba(255, 255, 255, 0.15) 0px 2px 8px;
 }
 
 .info {
   padding: 10px;
-  background-color: #171717;
-  color: #fff;
+  background-color: var(--card-bg);
+  color: var(--color-base-text);
 }
 
 h3 {
@@ -241,8 +249,8 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(#0a0a0a, #22c55e);
-  color: #fff;
+  background: var(--footer-bg);
+  color: var(--color-base-text);
   font-size: 1.25rem;
 }
 
@@ -250,7 +258,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 footer > .icons {
@@ -263,6 +271,5 @@ footer > .icons {
 
 h4 {
   font-size: 2rem;
+  margin: 10px;
 }
-
-/*Work on mobile responsiveness*/
